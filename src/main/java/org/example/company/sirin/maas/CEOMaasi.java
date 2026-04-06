@@ -1,14 +1,18 @@
-public CEOMaasi extends calisanMaasi {
+package org.example.company.sirin.maas;
 
-    
-    public CEOMaasi(double vergiOrani, double brutMaasi){
-        super(vergiOrani, brutMaasi)
+public class CEOMaasi extends calisanMaasi {
+
+    public CEOMaasi(double vergiOrani, double brutMaasi) {
+        super(vergiOrani, brutMaasi);
     }
 
-
+    @Override
     public double hesapla(double bazMaas) {
-        double netMaasi = bazMaas + (brutMaasi * vergiOrani);
-        return netMaasi;
-    }
+        double brut = getBrutMaasi();
+        double vergi = getVergiOrani();
 
+        double netMaasi = brut - (brut * vergi);
+
+        return netMaasi + 20000;
+    }
 }

@@ -1,20 +1,23 @@
 package org.example.company.sirin;
 
-public class director {
-    private String fullName;
+public class director extends calisan {
+
     private departman[] departmans;
 
+    public director(String isim, String cinsiyet, int telefonNo, String tcNo, String adres, int yas,
+                    long id, String departman, String iseGiris, int maas,
+                    departman[] departmans) {
 
+        super(isim, cinsiyet, telefonNo, tcNo, adres, yas, id, departman, iseGiris, maas);
 
-    public director (String fullName,departman[] departmans){
-        this.fullName = fullName;
-        this.departmans=departmans;
+        this.departmans = departmans;
     }
-    public String getFullName(){
-        return  fullName;
-    }
 
-    public departman[] getDepartmans(){
+    public departman[] getDepartmans() {
         return departmans;
+    }
+
+    public void departmanlariYonet() {
+        System.out.println(getIsim() + " birden fazla departmanı yönetiyor.");
     }
 }

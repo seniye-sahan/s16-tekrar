@@ -1,15 +1,14 @@
-public class ceo{
-    private String fullName;
-    
+package org.example.company.sirin;
 
+public class ceo extends calisan {
 
-    public ceo(String fullName){
-        this.fullName=fullName;
+    public ceo(String isim, String cinsiyet, int telefonNo, String tcNo, String adres, int yas,
+               long id, String departman, String iseGiris, int maas) {
+
+        super(isim, cinsiyet, telefonNo, tcNo, adres, yas, id, departman, iseGiris, maas);
     }
 
-
-
-    public String getFullName(){
-        return fullName;
+    public void sirketiYonet() {
+        System.out.println(getIsim() + " şirketi yönetiyor.");
     }
 }

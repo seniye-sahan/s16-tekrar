@@ -1,23 +1,14 @@
 package org.example.company.sirin;
 
-public class takimLideri{
-    private String fullName;
-    private departman[] departmans;
+public class takimLideri extends calisan {
 
+    public takimLideri(String isim, String cinsiyet, int telefonNo, String tcNo, String adres, int yas,
+                       long id, String departman, String iseGiris, int maas) {
 
-
-    public takimLideri(String fullName,departman[] departmans){
-        this.fullName=fullName;
-        this.departmans=departmans;
+        super(isim, cinsiyet, telefonNo, tcNo, adres, yas, id, departman, iseGiris, maas);
     }
 
-
-    public String getFullName(){
-        return fullName;
-    }
-
-
-    public departman[] departmans(){
-        return departmans;
+    public void takimYonet() {
+        System.out.println(getIsim() + " takımı yönetiyor.");
     }
 }

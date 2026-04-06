@@ -1,15 +1,14 @@
 package org.example.company.sirin;
 
-public class mudur{
-    private String fullName;
+public class mudur extends calisan {
 
+    public mudur(String isim, String cinsiyet, int telefonNo, String tcNo, String adres, int yas,
+                 long id, String departman, String iseGiris, int maas) {
 
-    public mudur (String fullName){
-        this.fullName = fullName;
+        super(isim, cinsiyet, telefonNo, tcNo, adres, yas, id, departman, iseGiris, maas);
     }
 
-
-    public String getFullName(){
-        return fullName;
+    public void departmanYonet() {
+        System.out.println(getIsim() + " departmanı yönetiyor.");
     }
 }
